@@ -1,0 +1,5 @@
+lista = [x | x <- [1..2017], (x `mod` 400 == 0) || (x `mod` 4 == 0) && (x `mod` 100 /= 0)]
+lista2 = [x | x <- drop (length lista - 10) lista]
+
+main = do
+  print(lista2)

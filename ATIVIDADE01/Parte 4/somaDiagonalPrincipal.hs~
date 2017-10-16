@@ -1,0 +1,12 @@
+teste = [[1,0,0],[0,1,0],[0,0,1]]
+
+somaDiagonalPrincipal :: [[Int]] -> Int
+somaDiagonalPrincipal matriz = somaDiagonalPrincipalb ((length matriz)-1) 0 matriz
+
+somaDiagonalPrincipalb :: Int -> Int -> [[Int]] -> Int
+somaDiagonalPrincipalb index soma matriz
+  | index == 0 = soma+((matriz!!index)!!index)
+  | otherwise = somaDiagonalPrincipalb (index-1) (soma+((matriz!!index)!!index)) matriz
+
+main = do
+  print(somaDiagonalPrincipal teste)

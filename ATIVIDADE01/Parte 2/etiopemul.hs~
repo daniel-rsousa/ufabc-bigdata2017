@@ -1,0 +1,9 @@
+etiopemul :: Integer -> Integer -> Integer
+etiopemul a b
+  | a == 0 = 0
+  | b == 0 = 0
+  | (a `mod` 2) == 1 = b + etiopemul (a`div`2) (b*2)
+  | otherwise = etiopemul (a`div`2) (b*2)
+  
+main = do
+  print(etiopemul 122 35)

@@ -1,0 +1,16 @@
+divisivel20 :: Integer -> Bool
+divisivel20 x = divisivel20b x 2
+
+divisivel20b ::  Integer -> Integer -> Bool
+divisivel20b x y
+  | (x `mod` y) > 0 = False
+  | ((x `mod` y) == 0) && (y == 20) = True
+  | otherwise = divisivel20b x (y+1)
+  
+projectEuler5 :: Integer -> Integer
+projectEuler5 x
+  | divisivel20 x == True = x
+  | otherwise = projectEuler5(x+20)
+  
+main = do
+  print(projectEuler5 20)

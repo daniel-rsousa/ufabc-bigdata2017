@@ -1,0 +1,10 @@
+exercicio7 :: Double -> (Double, Double)
+exercicio7 ang = (val1, val2)
+  where
+    val1 = sqrt((1 - cos(ang))/2)
+    val2 = -sqrt((1 - cos(ang))/2)
+    
+main = do
+    print(exercicio7 3)
+
+

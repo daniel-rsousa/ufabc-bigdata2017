@@ -1,0 +1,14 @@
+listaFib = 1 : 2 : prox listaFib
+  where
+    prox (x:t@(y:resto)) = (x+y) : prox t
+    
+listaFibPares = [x | x <- takeWhile (\x -> x < 4000000) listaFib, (x `mod` 2) == 0]
+
+soma :: [Integer] -> Integer
+soma list = sum list
+--soma [] = 0
+--soma(x:xs) = x + soma(xs)
+
+
+main = do
+  print(soma listaFibPares)

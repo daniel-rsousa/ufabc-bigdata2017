@@ -1,0 +1,7 @@
+ehTriangulo :: Int -> Int -> Int -> String
+ehTriangulo x y z
+  | (z + y > x) && (x + z > y) && (x + y > z) = "eh triangulo!"
+  | otherwise = "Nao eh triangulo!"
+  
+main = do
+  print(ehTriangulo 2 1 3)

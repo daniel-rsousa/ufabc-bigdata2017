@@ -1,0 +1,5 @@
+concatStr :: String -> String -> String
+concatStr str1 str2 = str1 ++ (' ' : str2)
+
+main = do
+  print(concatStr "oi" "Teste")

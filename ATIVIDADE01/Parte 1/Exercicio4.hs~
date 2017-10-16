@@ -1,0 +1,14 @@
+mod_int :: Integer -> Integer
+mod_int x = (x `mod` 5) + (x `mod` 3)
+
+conv_string :: Integer -> String
+conv_string  valor
+  | valor == 0 = "True"
+  | otherwise = "False"
+  
+mult35 :: Integer -> String
+mult35 x = conv_string $ mod_int x
+
+main = do
+    print(mult35 44)
+  
